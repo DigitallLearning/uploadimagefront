@@ -9,20 +9,10 @@ function Rounting()
      return(
         <div>
         <BrowserRouter >
-          <Navbar bg="dark" data-bs-theme="dark">
-        <Container>
-          <Navbar.Brand href="/">Arvind</Navbar.Brand>
-          <Nav className="me-auto">
-            <Nav.Link href="/">Home</Nav.Link>
-            <Nav.Link href="/post">Post Data</Nav.Link>
-            <Nav.Link href="/get">Get Data</Nav.Link>
-          </Nav>
-        </Container>
-      </Navbar> 
-      <br></br> 
-        <Routes>
-           
-        
+         <Link to="/">Home Page</Link><br></br>
+         <Link to="/post">Post Page</Link><br></br>
+         <Link to="/get">Get Page</Link><br></br> 
+        <Routes> 
             <Route path="/post" element={<PostData/>}/>
             <Route path="/get"  element={<GetData/>}/>
         </Routes>
