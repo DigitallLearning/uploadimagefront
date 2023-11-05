@@ -22,7 +22,7 @@ function Rounting()
       <br></br> 
         <Routes>
            
-            <Route path="/home" element={<Rounting/>}/>
+            <Route path="/" element={<Rounting/>}/>
             <Route path="/post" element={<PostData/>}/>
             <Route path="/get"  element={<GetData/>}/>
         </Routes>
