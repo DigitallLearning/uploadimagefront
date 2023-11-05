@@ -21,8 +21,10 @@ function Rounting()
       </Navbar> 
       <br></br> 
         <Routes>
-            <Route  path="/get" element={<GetData></GetData>}></Route>
-            <Route path="/post" element={<PostData></PostData>}></Route>       
+           
+            <Route path="/home" element={<Rounting/>}/>
+            <Route path="/post" element={<PostData/>}/>
+            <Route path="/get"  element={<GetData/>}/>
         </Routes>
         </BrowserRouter>
         </div>
