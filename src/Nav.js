@@ -1,12 +1,12 @@
 import "./routing.css"
 import { NavLink } from 'react-router-dom'
+import Button from 'react-bootstrap/Button';
 function Nav()
 {
     return(
         <nav className="navbar">
         <div className="container">
         <div className="logo">
-        
         </div>
         <div className="nav-elements">
           <ul>
@@ -15,9 +15,12 @@ function Nav()
             <li><NavLink to="/get">View Data</NavLink></li>
             <li><NavLink to="/about">About</NavLink></li>
             <li><NavLink to="/contact">Contact</NavLink></li>
-          </ul>
+            <li> <Button variant="primary">Register</Button></li>
+            <li> <Button variant="primary">Login</Button></li>
+          </ul>   
         </div>
       </div>
+      
     </nav>
     )
 }

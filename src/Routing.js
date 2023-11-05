@@ -3,6 +3,7 @@ import GetData from "./GetData"
 import PostData from "./PostData"
 import "./routing.css"
 import Nav from "./Nav"
+import Foot from "./Foot"
 function Rounting()
 {
      return(
@@ -15,6 +16,7 @@ function Rounting()
             <Route path="/get"  element={<GetData/>}/>
         </Routes>
         </BrowserRouter>
+        <Foot></Foot>
         </div>
      )
 }
