@@ -1,4 +1,6 @@
 import React from 'react';
+import { useState } from "react";
+import axios from "axios";
 import {
   MDBBtn,
   MDBContainer,
@@ -14,6 +16,23 @@ import {
 from 'mdb-react-ui-kit';
 function Register()
 {
+  const [uname, setUname] = useState('')
+  const [uemail, setUemail] = useState('')
+  const [upass, setUpass] = useState('')
+  const [ucpass, setUcpass] = useState('')
+  const handleApi = (e) => {
+    const url = "https://uploadimage-t8wr.onrender.com/register"
+    const formData = new FormData()
+    formData.append('uname', uname)
+    formData.append('uemail', uemail)
+    formData.append('upass', upass)
+    formData.append('ucpass', ucpass)
+    axios.post(url, formData).then(result => {
+      console.log(result.data)
+      alert('success')
+    })
+  }
+
     return (
         <MDBContainer fluid>
     
@@ -26,26 +45,26 @@ function Register()
     
                   <div className="d-flex flex-row align-items-center mb-4 ">
                     <MDBIcon fas icon="user me-3" size='lg'/>
-                    <MDBInput placeholder='Enter Name' type='text' className='w-100'/>
+                    <MDBInput placeholder='Enter Name' type='text' className='w-100' onChange={(e)=>setUname(e.target.value)}/>
                   </div>
     
                   <div className="d-flex flex-row align-items-center mb-4">
                     <MDBIcon fas icon="envelope me-3" size='lg'/>
-                    <MDBInput placeholder='Enter Email' type='email'/>
+                    <MDBInput placeholder='Enter Email' type='email' onChange={(e)=>setUemail(e.target.value)}/>
                   </div>
     
                   <div className="d-flex flex-row align-items-center mb-4">
                     <MDBIcon fas icon="lock me-3" size='lg'/>
-                    <MDBInput placeholder='Enter password' type='password'/>
+                    <MDBInput placeholder='Enter password' type='password' onChange={(e)=>setUpass(e.target.value)}/>
                   </div>
     
                   <div className="d-flex flex-row align-items-center mb-4">
                     <MDBIcon fas icon="key me-3" size='lg'/>
-                    <MDBInput placeholder='Confirmed Password' type='password'/>
+                    <MDBInput placeholder='Confirmed Password' type='password' onChange={(e)=>setUcpass(e.target.value)}/>
                   </div>
     
                 
-                  <MDBBtn className='mb-4' size='lg'>Submit</MDBBtn>
+                  <MDBBtn className='mb-4' size='lg' onClick={handleApi}>Submit</MDBBtn>
     
                 </MDBCol>
     
