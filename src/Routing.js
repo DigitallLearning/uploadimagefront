@@ -5,6 +5,7 @@ import "./routing.css"
 import Nav from "./Nav"
 import Foot from "./Foot"
 import Register from "./Register"
+import Login from "./Login"
 function Rounting()
 {
      return(
@@ -16,6 +17,7 @@ function Rounting()
             <Route path="/post" element={<PostData/>}/>
             <Route path="/get"  element={<GetData/>}/>
             <Route path="/register" element={<Register/>}/>
+            <Route path="/login" element={<Login/>}/>
         </Routes>
         </BrowserRouter>
         <Foot></Foot>

@@ -1,6 +1,8 @@
 import "./routing.css"
 import { NavLink } from 'react-router-dom'
 import Button from 'react-bootstrap/Button';
+import { Link } from 'react-router-dom'
+import Register from "./Register";
 function Nav()
 {
   
@@ -16,8 +18,8 @@ function Nav()
             <li><NavLink to="/get">View Data</NavLink></li>
             <li><NavLink to="/about">About</NavLink></li>
             <li><NavLink to="/contact">Contact</NavLink></li>
-            <li><Button variant="primary">Register</Button></li>
-            <li><Button variant="primary">Login</Button></li>
+            <li><NavLink to="/register">Register</NavLink></li>
+            <li><NavLink to="/login">Login</NavLink></li>
           </ul>   
         </div>
       </div>
