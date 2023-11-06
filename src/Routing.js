@@ -4,6 +4,7 @@ import PostData from "./PostData"
 import "./routing.css"
 import Nav from "./Nav"
 import Foot from "./Foot"
+import Register from "./Register"
 function Rounting()
 {
      return(
@@ -14,6 +15,7 @@ function Rounting()
             <Route path="/" element={<GetData/>}/>
             <Route path="/post" element={<PostData/>}/>
             <Route path="/get"  element={<GetData/>}/>
+            <Route path="/register" element={<Register/>}/>
         </Routes>
         </BrowserRouter>
         <Foot></Foot>
