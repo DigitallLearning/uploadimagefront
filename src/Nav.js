@@ -21,9 +21,6 @@ function Nav()
             <li><NavLink to="/contact">Contact</NavLink></li>
            <li> <Button variant="primary" onClick={()=>navigate("/register")}>Register</Button></li>
             <li><Button variant="primary" onClick={()=>navigate("/login")}>Login</Button></li>
-            {/* <li><NavLink to="/register">Register</NavLink></li>
-            <li><NavLink to="/login">Login</NavLink></li> */}
-           
           </ul>   
         </div>
       </div>
