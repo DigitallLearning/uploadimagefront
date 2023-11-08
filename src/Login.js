@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useState } from 'react';
+import axios from "axios";
 import {
   MDBBtn,
   MDBContainer,
@@ -14,6 +15,29 @@ import {
 from 'mdb-react-ui-kit';
 function Login()
 {
+  const [uname,setName]=useState()
+  const [upass,setPass]=useState()
+ 
+  function submitForm()
+  {
+     //console.log(uname,upass)
+     const url = "https://uploadimage-t8wr.onrender.com/register"
+     const formData = new FormData()
+     formData.append('uname', uname)
+     formData.append('upass', upass)
+     axios.get(url, formData).then(result => {
+      let restaurant = result.data.find(element => element.uname == uname && element.upass==upass);
+       //alert(result.data)
+       //console.log(restaurant)
+       if(restaurant==undefined)
+       {
+        alert("Wrong Id or password")
+       }
+       else{
+        alert("Login")
+       }
+     })
+  }
     return (
       <MDBContainer fluid>
     
@@ -22,31 +46,32 @@ function Login()
           <MDBRow>
             <MDBCol md='10' lg='6' className='order-2 order-lg-1 d-flex flex-column align-items-center'>
 
-              <p classNAme="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">User Login</p>
+              <p className="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">User Login</p>
 
              
 
               <div className="d-flex flex-row align-items-center mb-4">
                 <MDBIcon fas icon="envelope me-3" size='lg'/>
-                <MDBInput placeholder='Enter Email' type='email'/>
+                <MDBInput placeholder='Enter Name' type='text' onChange={(e)=>setName(e.target.value)}/>
               </div>
 
               <div className="d-flex flex-row align-items-center mb-4">
                 <MDBIcon fas icon="lock me-3" size='lg'/>
-                <MDBInput placeholder='Enter password' type='password'/>
+                <MDBInput placeholder='Enter password' type='password' onChange={(e)=>setPass(e.target.value)}/>
               </div>
             
-              <MDBBtn className='mb-4' size='lg'>Submit</MDBBtn>
+              <MDBBtn className='mb-4' size='lg' onClick={submitForm}>Submit</MDBBtn>
 
             </MDBCol>
 
-            <MDBCol md='10' lg='6' className='order-1 order-lg-2 d-flex align-items-center'>
-              <MDBCardImage src='https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-registration/draw1.webp' fluid/>
-            </MDBCol>
+           
 
           </MDBRow>
+
+ 
         </MDBCardBody>
       </MDBCard>
+     
 
     </MDBContainer>
       );

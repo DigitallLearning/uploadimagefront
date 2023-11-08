@@ -6,6 +6,7 @@ import Nav from "./Nav"
 import Foot from "./Foot"
 import Register from "./Register"
 import Login from "./Login"
+import Item from "./Item"
 function Rounting()
 {
      return(
@@ -18,6 +19,7 @@ function Rounting()
             <Route path="/get"  element={<GetData/>}/>
             <Route path="/register" element={<Register/>}/>
             <Route path="/login" element={<Login/>}/>
+            <Route path="/item" element={<Item/>}/>
         </Routes>
         </BrowserRouter>
         <Foot></Foot>

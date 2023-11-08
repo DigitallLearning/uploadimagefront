@@ -1,6 +1,8 @@
 import {Container ,Card,Row, Button} from 'react-bootstrap';  
+import {useNavigate} from "react-router-dom"
 function CardData(prop)
 {
+  const navigate = useNavigate(); 
     return(
         <Container className='p-4'>  
         <Row>      
@@ -15,7 +17,7 @@ function CardData(prop)
             <Card.Title style={{color:"red", fontSize:"15px"}}>{item.pname.substring(0, 20)}</Card.Title>
             <Card.Title style={{color:"blue", fontSize:"15px"}}>{item.pprice} Rs</Card.Title>  
             <Card.Text style={{color:"black", fontSize:"10px"}}>{item.pdesc.substring(0, 150)}</Card.Text> 
-            <Button variant="primary">View Detail</Button>
+            <Button variant="primary" onClick={()=>navigate("/item")}>View Detail</Button>
           </Card.Body>  
         </Card>  
       ))}  
