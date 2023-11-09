@@ -16,7 +16,6 @@ function Rounting()
         <Routes> 
             <Route path="/" element={<GetData/>}/>
             <Route path="/post" element={<PostData/>}/>
-            <Route path="/get"  element={<GetData/>}/>
             <Route path="/register" element={<Register/>}/>
             <Route path="/login" element={<Login/>}/>
             <Route path="/item" element={<Item/>}/>

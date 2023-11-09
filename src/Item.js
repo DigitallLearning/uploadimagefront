@@ -3,9 +3,18 @@ import {Button} from 'react-bootstrap';
 import logo from "./logo.svg"
 import { useEffect, useState } from "react"
 import { useLocation } from "react-router-dom";
-
+import {
+  MDBCard,
+  MDBCardTitle,
+  MDBCardText,
+  MDBCardBody,
+  MDBCardImage,
+  MDBRow,
+  MDBCol
+} from 'mdb-react-ui-kit';
 function Item()
 {
+  
   const location = useLocation();
   const carddata = location.state;
   const [carddata1,setCarddata]=useState({})
@@ -24,18 +33,22 @@ function Item()
   },[])
       return(
         <div>
-           <Card  className="m-2"  >
-            
-        <Card.Img variant="top" src={carddata1.pimage} style={{height:"300px",width:"300px"}} />
-        <Card.Body>
-          <Card.Title style={{color:"red"}}> {carddata1.pname}</Card.Title>
-          <Card.Title style={{color:"blue"}}> {carddata1.pprice} Rs</Card.Title>
-          <Card.Text style={{color:"black"}}>{carddata1.pdesc}</Card.Text>
-          <Button variant="primary" >Buy Now</Button>
-        </Card.Body>
-      </Card>
-      
-    
+         <MDBCard >
+      <MDBRow className='g-0'>
+        <MDBCol md='4'>
+          <MDBCardImage src={carddata1.pimage} width="300px"/>
+        </MDBCol>
+        <MDBCol md='8'>
+          <MDBCardBody>
+            <MDBCardTitle style={{color:"red"}}>{carddata1.pname}</MDBCardTitle>
+            <MDBCardTitle style={{color:"blue"}}>{carddata1.pprice} RS</MDBCardTitle>
+            <MDBCardText>
+            {carddata1.pdesc}
+            </MDBCardText>
+          </MDBCardBody>
+        </MDBCol>
+      </MDBRow>
+    </MDBCard>
         </div>
       )
 }

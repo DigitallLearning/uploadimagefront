@@ -1,8 +1,6 @@
 import "./routing.css"
 import { NavLink } from 'react-router-dom'
 import Button from 'react-bootstrap/Button';
-import { Link } from 'react-router-dom'
-import Register from "./Register";
 import {useNavigate} from "react-router-dom"
 function Nav()
 {
@@ -16,7 +14,6 @@ function Nav()
           <ul>
             <li><NavLink to="/">Home</NavLink></li>
             <li><NavLink to="/post">Post Data</NavLink></li>
-            <li><NavLink to="/get">View Data</NavLink></li>
             <li><NavLink to="/about">About</NavLink></li>
             <li><NavLink to="/contact">Contact</NavLink></li>
            <li> <Button variant="primary" onClick={()=>navigate("/register")}>Register</Button></li>
