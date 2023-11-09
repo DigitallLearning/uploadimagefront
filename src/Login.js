@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import axios from "axios";
+import UserProfile from './UserProfile';
+import { useNavigate } from "react-router-dom";
 import {
   MDBBtn,
   MDBContainer,
@@ -12,11 +14,13 @@ import {
   MDBIcon,
   MDBCheckbox
 }
+
 from 'mdb-react-ui-kit';
 function Login()
 {
   const [uname,setName]=useState()
   const [upass,setPass]=useState()
+  const navigate = useNavigate();
  
   function submitForm()
   {
@@ -34,7 +38,10 @@ function Login()
         alert("Wrong Id or password")
        }
        else{
-        alert("Login")
+       // alert("Login")
+        UserProfile.setName(uname)
+        navigate("/post")
+
        }
      })
   }

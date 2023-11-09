@@ -45,6 +45,7 @@ function Item()
             <MDBCardText>
             {carddata1.pdesc}
             </MDBCardText>
+            <Button variant="primary" >Buy Now</Button>
           </MDBCardBody>
         </MDBCol>
       </MDBRow>
