@@ -21,12 +21,14 @@ function Nav()
         <div className="container">
           
         <div className="logo">
-      
+        
         </div>
+       
         <div className="nav-elements">
         
           <ul>
-            <li><NavLink to="/">Home</NavLink></li>
+            
+            <li ><NavLink to="/" style={{fontSize:"28px"}}>Digital Learning</NavLink></li>
             <li><NavLink to="/java">Java</NavLink></li>
             <li><NavLink to="/mean">MEAN</NavLink></li>
             <li><NavLink to="/mern">MERN</NavLink></li>
