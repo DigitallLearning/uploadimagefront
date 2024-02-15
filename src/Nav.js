@@ -1,8 +1,8 @@
 import "./routing.css"
 import { NavLink } from 'react-router-dom'
-import Button from 'react-bootstrap/Button';
 import {useNavigate} from "react-router-dom"
 import UserProfile from './UserProfile';
+
 
 function Nav()
 {
@@ -15,26 +15,26 @@ function Nav()
     navigate("/")
   }
     return(
+      
         <nav className="navbar">
+         
         <div className="container">
+          
         <div className="logo">
+      
         </div>
         <div className="nav-elements">
+        
           <ul>
             <li><NavLink to="/">Home</NavLink></li>
-            
-            <li><NavLink to="/mobile">Mobile</NavLink></li>
-            <li><NavLink to="/laptop">Laptop</NavLink></li>
-            <li><NavLink to="/cloth">Cloth</NavLink></li>
-            <li><NavLink to="/shoes">Shoes</NavLink></li>
-            <li><NavLink to="/electronics">Electronics</NavLink></li>
-            <li><NavLink to="/jwellery">Jwellery</NavLink></li>
-            {UserProfile.getName() == "null"? <>
-            <li> <Button variant="primary" onClick={()=>navigate("/register")}>Register</Button></li>
-              <li><Button variant="primary" onClick={()=>navigate("/login")}>Login</Button></li>
-            </>: <li><Button variant="primary" onClick={()=>logout()}>Logout</Button></li> }
-            {UserProfile.getName() == "null"? null: <li>Hello {UserProfile.getName()}</li> }
-          
+            <li><NavLink to="/java">Java</NavLink></li>
+            <li><NavLink to="/mean">MEAN</NavLink></li>
+            <li><NavLink to="/mern">MERN</NavLink></li>
+            <li><NavLink to="/python">Python</NavLink></li>
+            <li><NavLink to="/android">Android</NavLink></li>
+            <li><NavLink to="/react">React JS</NavLink></li>
+            <li><NavLink to="/node">Node JS</NavLink></li>
+            <li><NavLink to="/anguler">Anguler</NavLink></li>
           </ul>   
         </div>
       </div>

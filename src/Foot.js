@@ -12,11 +12,11 @@ export default function Foot() {
             <MDBCol md="3" lg="4" xl="3" className='mx-auto mb-4'>
               <h6 className='text-uppercase fw-bold mb-4'>
                 <MDBIcon icon="gem" className="me-3" />
-                Higher Coading Language
+             Digital Learning
               </h6>
-              <p>
-               We Provide Full stack Training in Java MEAN,MERN,Python and Android
-              </p>
+              <p>Internship Training</p>
+              <p>Corpotate Training</p>
+              <p>Placement Training</p>
             </MDBCol>
 
             <MDBCol md="2" lg="2" xl="2" className='mx-auto mb-4'>
@@ -75,7 +75,7 @@ export default function Foot() {
               </p>
               <p>
                 <MDBIcon icon="envelope" className="me-3" />
-                hcl.indore2023@gmail.com
+                digitallearning1505@gmail.com
               </p>
               <p>
                 <MDBIcon icon="phone" className="me-3" /> +91-82368 09542

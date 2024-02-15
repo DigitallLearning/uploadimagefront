@@ -3,8 +3,6 @@ import { useNavigate } from "react-router-dom";
 function CardData(prop)
 {
   const navigate = useNavigate();
- 
-
   const handleClick = (pid) => {
     const data = { name: pid};
     navigate("/item", { state: data });
